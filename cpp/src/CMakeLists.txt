@@ -1,3 +1,5 @@
 add_executable(exhaustive_search exhaustive_search.cc)
 add_executable(koch_curve koch_curve.cc)
 add_executable(merge_sort merge_sort.cc)
+add_executable(partition partition.cc)
+add_executable(quick_sort quick_sort.cc)

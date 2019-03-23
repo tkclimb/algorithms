@@ -1,6 +1,4 @@
 {
-  // See https://go.microsoft.com/fwlink/?LinkId=733558
-  // for the documentation about the tasks.json format
   "version": "2.0.0",
   "tasks": [
     {
@@ -29,6 +27,38 @@
         "cwd": "${workspaceFolder}/build"
       },
       "problemMatcher": []
+    },
+    {
+      "label": "partition",
+      "type": "shell",
+      "command": "src/partition",
+      "options": {
+        "cwd": "${workspaceFolder}/build"
+      },
+      "problemMatcher": []
+    },
+    {
+      "label": "quick_sort",
+      "type": "shell",
+      "command": "src/quick_sort",
+      "options": {
+        "cwd": "${workspaceFolder}/build"
+      },
+      "problemMatcher": []
+    },
+    {
+      "type": "shell",
+      "label": "clang++ build active file",
+      "command": "/usr/local/opt/llvm/bin/clang++",
+      "args": [
+        "-g",
+        "${file}",
+        "-o",
+        "${fileDirname}/${fileBasenameNoExtension}"
+      ],
+      "options": {
+        "cwd": "/usr/local/opt/llvm/bin"
+      }
     }
   ]
 }
