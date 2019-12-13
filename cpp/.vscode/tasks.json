@@ -47,18 +47,58 @@
       "problemMatcher": []
     },
     {
+      "label": "combination",
       "type": "shell",
-      "label": "clang++ build active file",
-      "command": "/usr/local/opt/llvm/bin/clang++",
-      "args": [
-        "-g",
-        "${file}",
-        "-o",
-        "${fileDirname}/${fileBasenameNoExtension}"
-      ],
+      "command": "src/combination",
       "options": {
-        "cwd": "/usr/local/opt/llvm/bin"
-      }
+        "cwd": "${workspaceFolder}/build"
+      },
+      "problemMatcher": []
+    },
+    {
+      "label": "rooted_trees",
+      "type": "shell",
+      "command": "src/rooted_trees",
+      "options": {
+        "cwd": "${workspaceFolder}/build"
+      },
+      "problemMatcher": []
+    },
+    {
+      "label": "rooted_trees2",
+      "type": "shell",
+      "command": "src/rooted_trees2",
+      "options": {
+        "cwd": "${workspaceFolder}/build"
+      },
+      "problemMatcher": []
+    },
+    {
+      "label": "binary_tree",
+      "type": "shell",
+      "command": "src/binary_tree",
+      "options": {
+        "cwd": "${workspaceFolder}/build"
+      },
+      "problemMatcher": []
+    },
+    {
+      "label": "tree_walk",
+      "type": "shell",
+      "command": "src/tree_walk",
+      "options": {
+        "cwd": "${workspaceFolder}/build"
+      },
+      "problemMatcher": []
+    }
+    {
+      "label": "binary_tree_insert",
+      "type": "shell",
+      "command": "src/binary_tree_insert",
+      "options": {
+        "cwd": "${workspaceFolder}/build"
+      },
+      "problemMatcher": []
     }
   ]
 }

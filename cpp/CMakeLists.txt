@@ -19,8 +19,10 @@ get_filename_component(ALG_SRC_DIR src ABSOLUTE)
 
 if(CMAKE_BUILD_TYPE STREQUAL "Debug") # only when CMAKE_BUILD_TYPE is "Debug"
   # Address sanitizer
-  add_compile_options(-O0 -Wno-unused-variable -Wno-unused-private-field -fno-omit-frame-pointer -O1 -fsanitize=address -fsanitize=leak)
+  add_compile_options(-O0 -Wno-unused-variable -Wno-unused-private-field -fno-omit-frame-pointer -fsanitize=address -fsanitize=leak)
   link_libraries(-fsanitize=address -fsanitize=leak)
+else()
+  add_compile_options(-O2)
 endif()
 
 include_directories(BEFORE

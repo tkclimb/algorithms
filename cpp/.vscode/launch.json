@@ -5,11 +5,15 @@
   "version": "0.2.0",
   "configurations": [
     {
-      "name": "debug quick_sort",
+      "name": "debug",
       "type": "cppdbg",
       "request": "launch",
-      "program": "${workspaceFolder}/build/src/quick_sort",
-      "args": [],
+      "program": "${workspaceFolder}/build/src/${fileBasenameNoExtension}",
+      "stdio": [
+        "${workspaceFolder}/data.txt",
+        null,
+        null
+      ],
       "stopAtEntry": false,
       "cwd": "${workspaceFolder}",
       "environment": [],
