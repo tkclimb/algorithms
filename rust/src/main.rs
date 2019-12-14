@@ -65,9 +65,9 @@ fn bottom_up_cut_rod(p: &mut [i64], n: usize) -> Vec<i64> {
     r
 }
 
-fn extend_bottom_up_cut_rod(p: &mut [i64], n: usize) -> (Vec<i64>, Vec<i64>) {
+fn extend_bottom_up_cut_rod(p: &mut [i64], n: usize) -> (Vec<i64>, Vec<usize>) {
     let mut r: Vec<i64> = Vec::new();
-    let mut s: Vec<i64> = Vec::new();
+    let mut s: Vec<usize> = Vec::new();
     r.resize_with(n + 1, || 0);
     s.resize_with(n + 1, || 0);
     for j in 1..n + 1 {
@@ -76,7 +76,7 @@ fn extend_bottom_up_cut_rod(p: &mut [i64], n: usize) -> (Vec<i64>, Vec<i64>) {
             let x = p[i] + r[j - (i + 1)];
             if x > q {
                 q = x;
-                s[j] = x;
+                s[j] = i;
             }
         }
         r[j] = q;
@@ -101,6 +101,7 @@ fn main() {
     assert!(r == r1[n]);
     assert!(r1 == r2);
     assert!(r1 == r3);
+    println!("{:?}", s)
 
     // for measuring time
     // let r1 = measure!({
