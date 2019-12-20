@@ -1,0 +1,7 @@
+0
+2
+node 0: parent = 3, sibling = 4, degree = 2, depth = 1, height = 1, internal node
+node 1: parent = 0, sibling = 2, degree = 0, depth = 2, height = 0, leaf
+node 2: parent = 0, sibling = 1, degree = 0, depth = 2, height = 0, leaf
+node 3: parent = -1, sibling = -1, degree = 2, depth = 0, height = 2, root
+node 4: parent = 3, sibling = 0, degree = 0, depth = 1, height = 0, leaf

@@ -1,6 +1,4 @@
 {
-  "C_Cpp.default.configurationProvider": "vector-of-bool.cmake-tools",
-  "C_Cpp.default.compilerPath": "/usr/local/opt/llvm/bin/clang++",
   "files.associations": {
     "cmath": "cpp",
     "cstddef": "cpp",
@@ -30,6 +28,8 @@
     "type_traits": "cpp",
     "typeinfo": "cpp",
     "utility": "cpp",
-    "vector": "cpp"
+    "vector": "cpp",
+    "list": "cpp",
+    "chrono": "cpp"
   }
 }
