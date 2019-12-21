@@ -1,4 +1,5 @@
 // use std::rand::task_rng;
+use ndarray::Array2;
 use rand::distributions::{Distribution, Uniform};
 use std::cmp;
 use std::time::{Duration, Instant};
@@ -90,9 +91,9 @@ fn rand_int() -> i64 {
     step.sample(&mut rng)
 }
 
-fn main() {
+fn eval_cut_rod() {
+    const n: usize = 10;
     let mut p = Vec::new();
-    let n = 10;
     p.resize_with(n, || rand_int());
     let r = cut_rod(&mut p, n);
     let r1 = memorized_cut_rod(&mut p, n);
@@ -109,4 +110,33 @@ fn main() {
     //     println!("try: n = {}", n);
     //     bottom_up_cut_rod(&mut p, n)
     // });
+}
+
+fn lcs_length(x: &[i64], y: &[i64]) -> Vec<i64> {
+    println!("{:?}", x);
+    let mut z = Vec::new();
+    z.resize_with(1, || 1);
+
+    let mut c: Array2<i64> = Array::zeros((y.len(), x.len()));
+    for i in 0..x.len() {
+        for j in 0..y.len() {
+            c[i][j] = (x[i] == y[i]) 0 : 1;
+        }
+    }
+    println!("{:?}" c);
+    z
+}
+
+fn main() {
+    const N: usize = 10;
+    // let mut x = Vec::new();
+    // let mut y = Vec::new();
+    // x.resize_with(N, || rand_int());
+    // y.resize_with(N, || rand_int());
+    let x = [2, 3, 5, 3, 4];
+    let y = [2, 1, 1, 3, 4];
+    let z = lcs_length(&x, &y);
+
+    let expect = [2, 3, 4];
+    println!("{:?} ", z)
 }
