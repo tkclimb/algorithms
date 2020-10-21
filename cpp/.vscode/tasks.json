@@ -2,6 +2,42 @@
   "version": "2.0.0",
   "tasks": [
     {
+      "label": "parse_polish_notation",
+      "type": "shell",
+      "command": "src/parse_polish_notation",
+      "options": {
+        "cwd": "${workspaceFolder}/build"
+      },
+      "problemMatcher": []
+    },
+    {
+      "label": "simple_programming_languag,",
+      "type": "shell",
+      "command": "src/simple_programming_language",
+      "options": {
+        "cwd": "${workspaceFolder}/build"
+      },
+      "problemMatcher": []
+    },
+    {
+      "label": "forward_linked_list",
+      "type": "shell",
+      "command": "src/forward_linked_list",
+      "options": {
+        "cwd": "${workspaceFolder}/build"
+      },
+      "problemMatcher": []
+    },
+    {
+      "label": "run_length",
+      "type": "shell",
+      "command": "src/run_length",
+      "options": {
+        "cwd": "${workspaceFolder}/build"
+      },
+      "problemMatcher": []
+    },
+    {
       "label": "exhaustive_search",
       "type": "shell",
       "command": "src/exhaustive_search",

@@ -30,6 +30,12 @@
     "utility": "cpp",
     "vector": "cpp",
     "list": "cpp",
-    "chrono": "cpp"
-  }
+    "chrono": "cpp",
+    "__locale": "cpp",
+    "locale": "cpp",
+    "filesystem": "cpp",
+    "queue": "cpp",
+    "stack": "cpp"
+  },
+  "C_Cpp.default.configurationProvider": "vector-of-bool.cmake-tools"
 }
